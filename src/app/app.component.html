@@ -1,5 +1,9 @@
 <main class="main">
   <app-header />
+  <div class="mx-20 my-20">
+    {{internalMessage}}
+    <app-card (messageEvent)="receiveMessage($event)" [title]="dummyData.title" [content]="dummyData.content"/>
+  </div>
   <app-footer />
 </main>
 <router-outlet />
